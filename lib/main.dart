@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
-main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  build(context) {
+  @override
+  Widget build(context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Hello world'),
+          title: Text('ayyyy lmao'),
         ),
       ),
     );
