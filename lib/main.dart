@@ -8,7 +8,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('ayyyy lmao'),
+          title: Text('LearnLocker'),
+        ),
+        body: Card(
+          child: Column(
+            children: <Widget>[
+              Image.asset('assets/ayy.jpg', fit: BoxFit.fitWidth),
+              Text('ayyyyy lmao whats good doe')
+            ],
+          ),
         ),
       ),
     );
