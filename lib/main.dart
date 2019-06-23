@@ -2,9 +2,19 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   @override
-  Widget build(context) {
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return _MyAppState();
+  }
+}
+
+class _MyAppState extends State<MyApp> {
+  List<String> _products = ['Testing flutter ayye'];
+
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
@@ -19,14 +29,18 @@ class MyApp extends StatelessWidget {
                   child: Text('Login'),
                 ),
               ),
-              Card(
-                child: Column(
-                  children: <Widget>[
-                    Image.asset('assets/ayy.jpg', fit: BoxFit.fitWidth),
-                    Text('ayyyyy lmao whats good doe???')
-                  ],
-                ),
-              )
+              Column(
+                children: _products
+                    .map((element) => Card(
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset('assets/ayy.jpg'),
+                              Text(element)
+                            ],
+                          ),
+                        ))
+                    .toList(),
+              ),
             ],
           )),
     );
